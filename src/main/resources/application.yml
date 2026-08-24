@@ -1,0 +1,36 @@
+# Production wiring: a real Kafka cluster and a real PostgreSQL instance.
+# Tests and the measurement runs never load this file; they use
+# src/test/resources/application.yml, which points at an embedded Kafka
+# broker and an in-memory H2 database in PostgreSQL-compatibility mode
+# instead, because no standalone broker or database is available in this
+# build environment. See the README's "honest framing" section.
+spring:
+  application:
+    name: card-authorization-gateway
+  kafka:
+    bootstrap-servers: localhost:9092
+    consumer:
+      group-id: card-authorization-gateway
+  datasource:
+    url: jdbc:postgresql://localhost:5432/card_authorization
+    username: cardauth_app
+    password: ${CARDAUTH_DB_PASSWORD:}
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+    open-in-view: false
+
+cardauth:
+  kafka:
+    topic: card-authorization-messages
+  accounts:
+    count: 50
+    opening-balance: "1000000.00"
+
+logging:
+  level:
+    com.manas.cardauth: INFO

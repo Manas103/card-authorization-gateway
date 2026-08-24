@@ -1,0 +1,34 @@
+=== Card Authorization Gateway -- benchmark run ===
+started: 2026-08-24T17:10:38.178574100Z
+
+-- dataset --
+transactions: 50000
+accounts: 500
+in-flight (authorization only, no terminal): 100
+total messages: 99900
+
+-- canonical run (in order, no duplicates) --
+elapsed: 2303 ms
+resolved transactions: 49900
+still held (authorization only, no terminal seen): 100
+distinct (messageId, traceNumber) keys seen: 99900
+cleared: 42391, released (reversed): 7509
+
+-- canonical decision latency (AuthorizationLedgerEngine.ingest alone, n=99900) --
+p50: 0.0006 ms
+p99: 0.0019 ms
+max: 6.0166 ms
+
+canonical final-state digest (SHA-256): 6087e3a219cd7184164b431dc3e63e41fa35b16b472adb1957e45ce00066e9f7
+
+-- noisy replay (5% duplicated, fully shuffled out of transaction order) --
+noisy stream size: 104895 (4995 duplicated deliveries)
+elapsed: 1077 ms
+resolved transactions: 49900
+still held: 100
+distinct (messageId, traceNumber) keys seen (post-dedup): 99900
+noisy final-state digest (SHA-256): 6087e3a219cd7184164b431dc3e63e41fa35b16b472adb1957e45ce00066e9f7
+
+identical final state after noisy replay: true
+
+finished: 2026-08-24T17:10:43.230395600Z

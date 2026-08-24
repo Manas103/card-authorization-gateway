@@ -1,0 +1,32 @@
+# Test / measurement profile: an in-memory H2 database in PostgreSQL
+# compatibility mode. No real PostgreSQL is reachable in this build
+# environment; spring.kafka.bootstrap-servers is overridden per-test via
+# @DynamicPropertySource once the embedded Kafka broker has picked its port.
+spring:
+  datasource:
+    url: jdbc:h2:mem:card_authorization;MODE=PostgreSQL;DB_CLOSE_DELAY=-1
+    driver-class-name: org.h2.Driver
+    username: sa
+    password: ""
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.H2Dialect
+    open-in-view: false
+  kafka:
+    consumer:
+      group-id: card-authorization-gateway-test
+
+cardauth:
+  kafka:
+    topic: card-authorization-messages-test
+  accounts:
+    count: 20
+    opening-balance: "1000000.00"
+
+logging:
+  level:
+    com.manas.cardauth: INFO
+    org.apache.kafka: WARN
