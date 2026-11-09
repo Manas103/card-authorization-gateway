@@ -1,0 +1,50 @@
+mvn clean test (card-authorization-gateway), 2026-11-09T07:25:32Z
+
+=== target/surefire-reports/com.manas.cardauth.engine.AuthorizationLedgerEngineTest.txt ===
+-------------------------------------------------------------------------------
+Test set: com.manas.cardauth.engine.AuthorizationLedgerEngineTest
+-------------------------------------------------------------------------------
+Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.062 s -- in com.manas.cardauth.engine.AuthorizationLedgerEngineTest
+
+=== target/surefire-reports/com.manas.cardauth.engine.ReferenceOracleDiffTest.txt ===
+-------------------------------------------------------------------------------
+Test set: com.manas.cardauth.engine.ReferenceOracleDiffTest
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.135 s -- in com.manas.cardauth.engine.ReferenceOracleDiffTest
+
+=== target/surefire-reports/com.manas.cardauth.health.AuthEventHealthIntegrationTest.txt ===
+-------------------------------------------------------------------------------
+Test set: com.manas.cardauth.health.AuthEventHealthIntegrationTest
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 5.334 s -- in com.manas.cardauth.health.AuthEventHealthIntegrationTest
+
+=== target/surefire-reports/com.manas.cardauth.health.BinWindowAggregatorTest.txt ===
+-------------------------------------------------------------------------------
+Test set: com.manas.cardauth.health.BinWindowAggregatorTest
+-------------------------------------------------------------------------------
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.007 s -- in com.manas.cardauth.health.BinWindowAggregatorTest
+
+=== target/surefire-reports/com.manas.cardauth.health.HealthControllerTest.txt ===
+-------------------------------------------------------------------------------
+Test set: com.manas.cardauth.health.HealthControllerTest
+-------------------------------------------------------------------------------
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.004 s -- in com.manas.cardauth.health.HealthControllerTest
+
+=== target/surefire-reports/com.manas.cardauth.health.HealthStreamGeneratorTest.txt ===
+-------------------------------------------------------------------------------
+Test set: com.manas.cardauth.health.HealthStreamGeneratorTest
+-------------------------------------------------------------------------------
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.027 s -- in com.manas.cardauth.health.HealthStreamGeneratorTest
+
+=== target/surefire-reports/com.manas.cardauth.health.IncidentDetectorTest.txt ===
+-------------------------------------------------------------------------------
+Test set: com.manas.cardauth.health.IncidentDetectorTest
+-------------------------------------------------------------------------------
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 s -- in com.manas.cardauth.health.IncidentDetectorTest
+
+=== target/surefire-reports/com.manas.cardauth.integration.CardAuthorizationIntegrationTest.txt ===
+-------------------------------------------------------------------------------
+Test set: com.manas.cardauth.integration.CardAuthorizationIntegrationTest
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.515 s -- in com.manas.cardauth.integration.CardAuthorizationIntegrationTest
+

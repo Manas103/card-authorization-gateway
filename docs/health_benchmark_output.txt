@@ -1,0 +1,45 @@
+=== Authorization Health Monitor and Incident Console -- benchmark run ===
+started: 2026-11-09T07:14:02.482305200Z
+
+-- dataset --
+issuer BINs: 50
+authorizations per BIN: 20000
+total events (authorizations + reversals/clearings): 1966037
+injected incident episodes: 24
+window size: 10s, minimum-volume guard: 50, approval-rate floor: 0.8
+
+-- processing --
+elapsed: 290 ms for 1966037 events
+incidents raised: 60
+
+-- per-episode detection --
+BIN-000000 onset=2026-09-01T00:18:29Z detectedAt=2026-09-01T00:18:40Z delay=11s dominantCode=INSUFFICIENT_FUNDS injectedCode=INSUFFICIENT_FUNDS withinDeadline=true
+BIN-000001 onset=2026-09-01T00:03:56Z detectedAt=2026-09-01T00:04:00Z delay=4s dominantCode=INVALID_PIN injectedCode=INVALID_PIN withinDeadline=true
+BIN-000002 onset=2026-09-01T00:26:09Z detectedAt=2026-09-01T00:26:20Z delay=11s dominantCode=INSUFFICIENT_FUNDS injectedCode=INSUFFICIENT_FUNDS withinDeadline=true
+BIN-000003 onset=2026-09-01T00:09:28Z detectedAt=2026-09-01T00:09:40Z delay=12s dominantCode=EXPIRED_CARD injectedCode=EXPIRED_CARD withinDeadline=true
+BIN-000004 onset=2026-09-01T00:05:38Z detectedAt=2026-09-01T00:05:40Z delay=2s dominantCode=SUSPECTED_FRAUD injectedCode=SUSPECTED_FRAUD withinDeadline=true
+BIN-000005 onset=2026-09-01T00:11:20Z detectedAt=2026-09-01T00:11:30Z delay=10s dominantCode=INVALID_PIN injectedCode=INVALID_PIN withinDeadline=true
+BIN-000006 onset=2026-09-01T00:24:10Z detectedAt=2026-09-01T00:24:20Z delay=10s dominantCode=INSUFFICIENT_FUNDS injectedCode=INSUFFICIENT_FUNDS withinDeadline=true
+BIN-000007 onset=2026-09-01T00:13:02Z detectedAt=2026-09-01T00:13:10Z delay=8s dominantCode=INSUFFICIENT_FUNDS injectedCode=INSUFFICIENT_FUNDS withinDeadline=true
+BIN-000008 onset=2026-09-01T00:05:27Z detectedAt=2026-09-01T00:05:30Z delay=3s dominantCode=INVALID_PIN injectedCode=INVALID_PIN withinDeadline=true
+BIN-000009 onset=2026-09-01T00:15:50Z detectedAt=2026-09-01T00:16:00Z delay=10s dominantCode=INSUFFICIENT_FUNDS injectedCode=INSUFFICIENT_FUNDS withinDeadline=true
+BIN-000010 onset=2026-09-01T00:15:40Z detectedAt=2026-09-01T00:15:50Z delay=10s dominantCode=DO_NOT_HONOR injectedCode=DO_NOT_HONOR withinDeadline=true
+BIN-000011 onset=2026-09-01T00:26:51Z detectedAt=2026-09-01T00:27:00Z delay=9s dominantCode=INVALID_PIN injectedCode=INVALID_PIN withinDeadline=true
+BIN-000012 onset=2026-09-01T00:16:22Z detectedAt=2026-09-01T00:16:30Z delay=8s dominantCode=INSUFFICIENT_FUNDS injectedCode=INSUFFICIENT_FUNDS withinDeadline=true
+BIN-000013 onset=2026-09-01T00:04:49Z detectedAt=2026-09-01T00:05:00Z delay=11s dominantCode=INSUFFICIENT_FUNDS injectedCode=INSUFFICIENT_FUNDS withinDeadline=true
+BIN-000014 onset=2026-09-01T00:05:27Z detectedAt=2026-09-01T00:05:30Z delay=3s dominantCode=DO_NOT_HONOR injectedCode=DO_NOT_HONOR withinDeadline=true
+BIN-000015 onset=2026-09-01T00:09:23Z detectedAt=2026-09-01T00:09:30Z delay=7s dominantCode=INVALID_PIN injectedCode=INVALID_PIN withinDeadline=true
+BIN-000016 onset=2026-09-01T00:06:45Z detectedAt=2026-09-01T00:06:50Z delay=5s dominantCode=EXPIRED_CARD injectedCode=EXPIRED_CARD withinDeadline=true
+BIN-000017 onset=2026-09-01T00:12:59Z detectedAt=2026-09-01T00:13:10Z delay=11s dominantCode=INSUFFICIENT_FUNDS injectedCode=INSUFFICIENT_FUNDS withinDeadline=true
+BIN-000018 onset=2026-09-01T00:21:39Z detectedAt=2026-09-01T00:21:50Z delay=11s dominantCode=INVALID_PIN injectedCode=INVALID_PIN withinDeadline=true
+BIN-000019 onset=2026-09-01T00:19:33Z detectedAt=2026-09-01T00:19:40Z delay=7s dominantCode=INSUFFICIENT_FUNDS injectedCode=INSUFFICIENT_FUNDS withinDeadline=true
+BIN-000020 onset=2026-09-01T00:29:34Z detectedAt=2026-09-01T00:29:40Z delay=6s dominantCode=INVALID_PIN injectedCode=INVALID_PIN withinDeadline=true
+BIN-000021 onset=2026-09-01T00:16:44Z detectedAt=2026-09-01T00:16:50Z delay=6s dominantCode=INSUFFICIENT_FUNDS injectedCode=INSUFFICIENT_FUNDS withinDeadline=true
+BIN-000022 onset=2026-09-01T00:32:04Z detectedAt=2026-09-01T00:32:10Z delay=6s dominantCode=DO_NOT_HONOR injectedCode=DO_NOT_HONOR withinDeadline=true
+BIN-000023 onset=2026-09-01T00:15:45Z detectedAt=2026-09-01T00:15:50Z delay=5s dominantCode=INVALID_PIN injectedCode=INVALID_PIN withinDeadline=true
+
+-- summary --
+episodes named within 30s of onset: 24 / 24
+false pages (incidents not matching any injected episode): 0
+finished: 2026-11-09T07:14:03.658601700Z
+

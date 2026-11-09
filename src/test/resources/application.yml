@@ -25,6 +25,13 @@ cardauth:
   accounts:
     count: 20
     opening-balance: "1000000.00"
+  health:
+    kafka:
+      topic: card-authorization-health-stream-test
+      group-id: card-authorization-health-monitor-test
+    window-seconds: 10
+    minimum-volume: 20
+    approval-rate-floor: 0.80
 
 logging:
   level:
