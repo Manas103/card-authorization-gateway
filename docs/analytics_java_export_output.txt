@@ -1,0 +1,30 @@
+=== Authorisation Performance Review -- dataset export ===
+started: 2026-11-20T23:13:48.209913400Z
+issuers per cohort: 10, authorisations per issuer: 40000, seed: 20261115
+
+total records generated: 1200000
+approved: 1096202, declined: 103798 (0.0865)
+
+-- decline-reason family mix (of 103798 declines) --
+INSUFFICIENT_FUNDS: 22382 (0.2156)
+SUSPECTED_FRAUD: 21688 (0.2089)
+CARD_DATA_ISSUE: 19398 (0.1869)
+DO_NOT_HONOR: 17134 (0.1651)
+ISSUER_UNAVAILABLE: 8059 (0.0776)
+CVV_AVS_MISMATCH: 15137 (0.1458)
+
+CSV written to C:\Users\Manas\Downloads\Auto Job Applier\Total Job Application process flow\projects\card-authorization-gateway\analytics\data\authorizations.csv (1200000 rows)
+finished: 2026-11-20T23:13:48.721637400Z
+
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.567 s -- in com.manas.cardauth.analytics.AuthorizationExportRunner
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  2.171 s
+[INFO] Finished at: 2026-11-20T18:13:48-05:00
+[INFO] ------------------------------------------------------------------------

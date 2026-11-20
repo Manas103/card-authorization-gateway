@@ -1,0 +1,81 @@
+=== Dataset ===
+total authorisations: 1200000
+
+=== Decline-reason family decomposition ===
+    decline_family  declines  declined_amount_eur
+INSUFFICIENT_FUNDS     22382           2809696.52
+   SUSPECTED_FRAUD     21688           2124837.33
+   CARD_DATA_ISSUE     19398           2214184.19
+      DO_NOT_HONOR     17134           2117157.97
+  CVV_AVS_MISMATCH     15137           1355955.75
+ISSUER_UNAVAILABLE      8059           1024302.41
+
+=== Peer-cohort benchmark ===
+     issuer_bin peer_cohort  authorizations  declines  decline_rate  peer_cohort_median_decline_rate  vs_peer_cohort_ratio
+BIN-TIER_A-0000      TIER_A           40000    1608.0      0.040200                         0.039563              1.016114
+BIN-TIER_A-0001      TIER_A           40000    1583.0      0.039575                         0.039563              1.000316
+BIN-TIER_A-0002      TIER_A           40000    1584.0      0.039600                         0.039563              1.000948
+BIN-TIER_A-0003      TIER_A           40000    1527.0      0.038175                         0.039563              0.964929
+BIN-TIER_A-0004      TIER_A           40000    1582.0      0.039550                         0.039563              0.999684
+BIN-TIER_A-0005      TIER_A           40000    1613.0      0.040325                         0.039563              1.019273
+BIN-TIER_A-0006      TIER_A           40000    1579.0      0.039475                         0.039563              0.997788
+BIN-TIER_A-0007      TIER_A           40000    1576.0      0.039400                         0.039563              0.995893
+BIN-TIER_A-0008      TIER_A           40000    1614.0      0.040350                         0.039563              1.019905
+BIN-TIER_A-0009      TIER_A           40000    1566.0      0.039150                         0.039563              0.989573
+BIN-TIER_B-0000      TIER_B           40000    3173.0      0.079325                         0.079725              0.994983
+BIN-TIER_B-0001      TIER_B           40000    3200.0      0.080000                         0.079725              1.003449
+BIN-TIER_B-0002      TIER_B           40000    3280.0      0.082000                         0.079725              1.028536
+BIN-TIER_B-0003      TIER_B           40000    3225.0      0.080625                         0.079725              1.011289
+BIN-TIER_B-0004      TIER_B           40000    3163.0      0.079075                         0.079725              0.991847
+BIN-TIER_B-0005      TIER_B           40000    3165.0      0.079125                         0.079725              0.992474
+BIN-TIER_B-0006      TIER_B           40000    3280.0      0.082000                         0.079725              1.028536
+BIN-TIER_B-0007      TIER_B           40000    3156.0      0.078900                         0.079725              0.989652
+BIN-TIER_B-0008      TIER_B           40000    3212.0      0.080300                         0.079725              1.007212
+BIN-TIER_B-0009      TIER_B           40000    3178.0      0.079450                         0.079725              0.996551
+BIN-TIER_C-0000      TIER_C           40000    5695.0      0.142375                         0.139750              1.018784
+BIN-TIER_C-0001      TIER_C           40000    5657.0      0.141425                         0.139750              1.011986
+BIN-TIER_C-0002      TIER_C           40000    5479.0      0.136975                         0.139750              0.980143
+BIN-TIER_C-0003      TIER_C           40000    5596.0      0.139900                         0.139750              1.001073
+BIN-TIER_C-0004      TIER_C           40000    5513.0      0.137825                         0.139750              0.986225
+BIN-TIER_C-0005      TIER_C           40000    5720.0      0.143000                         0.139750              1.023256
+BIN-TIER_C-0006      TIER_C           40000    5561.0      0.139025                         0.139750              0.994812
+BIN-TIER_C-0007      TIER_C           40000    5490.0      0.137250                         0.139750              0.982111
+BIN-TIER_C-0008      TIER_C           40000    5639.0      0.140975                         0.139750              1.008766
+BIN-TIER_C-0009      TIER_C           40000    5584.0      0.139600                         0.139750              0.998927
+
+per-cohort decline rate summary:
+                 mean    median       std
+peer_cohort                              
+TIER_A       0.039580  0.039563  0.000644
+TIER_B       0.080080  0.079725  0.001155
+TIER_C       0.139835  0.139750  0.002106
+
+=== CNP decline recoverability ===
+    decline_family  declines  declined_amount_eur               recovery_mechanism  recoverable
+ISSUER_UNAVAILABLE      2875            220645.19                   retry_schedule         True
+  CVV_AVS_MISMATCH     12766            990155.70                              NaN        False
+INSUFFICIENT_FUNDS      8505            659491.97                              NaN        False
+      DO_NOT_HONOR      6903            534770.79                              NaN        False
+   SUSPECTED_FRAUD     15999           1238242.50                              NaN        False
+   CARD_DATA_ISSUE     10042            780564.44 account_updater_or_network_token         True
+total_cnp_declines: 57090
+recoverable_cnp_declines: 12917
+recoverable_share_by_count: 0.22625678752846382
+total_cnp_declined_amount_eur: 4423870.590000001
+recoverable_cnp_declined_amount_eur: 1001209.6300000006
+recoverable_share_by_amount: 0.2263198277687414
+
+=== Recovered revenue by mechanism (named assumptions) ===
+recovery_mechanism  declined_amount_eur  recovery_success_probability  expected_recovered_revenue_eur
+   account_updater            390282.22                          0.55                     214655.2210
+     network_token            390282.22                          0.45                     175626.9990
+    retry_schedule            220645.19                          0.35                      77225.8165
+
+total expected recovered revenue (EUR): 467,508.04
+
+=== Claims summary ===
+1.2M simulated card authorisations: 1200000
+decomposed into 6 decline-reason families: 6
+each issuer benchmarked against a peer cohort: 30 issuers across 3 cohorts
+18% of declined CNP volume isolated as recoverable: 22.63% by count, 22.63% by amount
+recovered revenue stated against named assumptions: EUR 467,508.04 (assumptions: [{'recovery_mechanism': 'account_updater', 'recovery_success_probability': 0.55}, {'recovery_mechanism': 'network_token', 'recovery_success_probability': 0.45}, {'recovery_mechanism': 'retry_schedule', 'recovery_success_probability': 0.35}])

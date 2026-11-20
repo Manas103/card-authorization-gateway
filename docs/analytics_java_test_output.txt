@@ -1,0 +1,11 @@
+[INFO] Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.214 s -- in com.manas.cardauth.analytics.AuthorizationDatasetGeneratorTest
+[INFO] Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.011 s -- in com.manas.cardauth.engine.AuthorizationLedgerEngineTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.151 s -- in com.manas.cardauth.engine.ReferenceOracleDiffTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 5.142 s -- in com.manas.cardauth.health.AuthEventHealthIntegrationTest
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.009 s -- in com.manas.cardauth.health.BinWindowAggregatorTest
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.005 s -- in com.manas.cardauth.health.HealthControllerTest
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.029 s -- in com.manas.cardauth.health.HealthStreamGeneratorTest
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 s -- in com.manas.cardauth.health.IncidentDetectorTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.658 s -- in com.manas.cardauth.integration.CardAuthorizationIntegrationTest
+[INFO] Tests run: 32, Failures: 0, Errors: 0, Skipped: 0
+[INFO] BUILD SUCCESS
